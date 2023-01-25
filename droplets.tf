@@ -5,6 +5,13 @@ resource "digitalocean_droplet" "docker-2" {
   size   = "s-1vcpu-1gb"
 }
 
+resource "digitalocean_droplet" "docker-3" {
+  image  = "ubuntu-22-04-x64"
+  name   = "docker-3"
+  region = "lon1"
+  size   = "s-1vcpu-1gb"
+}
+
 resource "digitalocean_volume" "docker-1" {
   name   = "docker-1"
   size   = 1
