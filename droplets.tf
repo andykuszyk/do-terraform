@@ -1,10 +1,3 @@
-resource "digitalocean_droplet" "docker-2" {
-  image  = "ubuntu-18-04-x64"
-  name   = "docker-2"
-  region = "lon1"
-  size   = "s-1vcpu-1gb"
-}
-
 resource "digitalocean_droplet" "docker-3" {
   image  = "ubuntu-22-04-x64"
   name   = "docker-3"
