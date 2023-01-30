@@ -9,3 +9,7 @@ variable "akuszyk_zone_id" {
 variable "cronical_zone_id" {
   description = "The Cloudflare zone ID for cronical.net"
 }
+
+variable "marmyandme_zone_id" {
+  description = "The Cloudflare zone ID for marmyandme.co.uk"
+}

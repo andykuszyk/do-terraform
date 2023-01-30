@@ -112,3 +112,41 @@ resource "cloudflare_record" "cronical_mx1" {
   zone_id  = var.cronical_zone_id
 }
 
+resource "cloudflare_record" "marmyandme_marmyandme_co_uk" {
+  name    = "marmyandme.co.uk"
+  proxied = false
+  ttl     = 1
+  type    = "A"
+  value   = "23.227.38.65"
+  zone_id = var.marmyandme_zone_id
+}
+
+resource "cloudflare_record" "marmyandme_www" {
+  name    = "www"
+  proxied = false
+  ttl     = 1
+  type    = "CNAME"
+  value   = "shops.myshopify.com"
+  zone_id = var.marmyandme_zone_id
+}
+
+resource "cloudflare_record" "marmyandme_mx0" {
+  name     = "marmyandme.co.uk"
+  priority = 10
+  proxied  = false
+  ttl      = 1
+  type     = "MX"
+  value    = "mx0.123-reg.co.uk"
+  zone_id  = var.marmyandme_zone_id
+}
+
+resource "cloudflare_record" "marmyandme_mx1" {
+  name     = "marmyandme.co.uk"
+  priority = 20
+  proxied  = false
+  ttl      = 1
+  type     = "MX"
+  value    = "mx1.123-reg.co.uk"
+  zone_id  = var.marmyandme_zone_id
+}
+
