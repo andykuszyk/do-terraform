@@ -19,6 +19,6 @@ resource "digitalocean_volume" "docker-1" {
 }
 
 resource "digitalocean_volume_attachment" "docker-1" {
-  droplet_id = digitalocean_droplet.docker-2.id
+  droplet_id = digitalocean_droplet.docker-3.id
   volume_id  = digitalocean_volume.docker-1.id
 }
