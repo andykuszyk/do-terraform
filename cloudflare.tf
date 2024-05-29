@@ -40,8 +40,8 @@ resource "cloudflare_record" "akuszyk_akuszyk_com" {
   name    = "akuszyk.com"
   proxied = true
   ttl     = 1
-  type    = "A"
-  value   = digitalocean_droplet.docker-3.ipv4_address
+  type    = "CNAME"
+  value   = "andykuszyk.github.io"
   zone_id = var.akuszyk_zone_id
 }
 
