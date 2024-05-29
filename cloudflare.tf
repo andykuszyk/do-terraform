@@ -126,7 +126,7 @@ resource "cloudflare_record" "marmyandme_mx1" {
   proxied  = false
   ttl      = 1
   type     = "MX"
-  value    = "in1-smtp.messagingengine.com"
+  value    = "in2-smtp.messagingengine.com"
   zone_id  = var.marmyandme_zone_id
 }
 
