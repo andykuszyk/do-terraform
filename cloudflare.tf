@@ -49,29 +49,9 @@ resource "cloudflare_record" "akuszyk_www" {
   name    = "www"
   proxied = true
   ttl     = 1
-  type    = "A"
-  value   = digitalocean_droplet.docker-3.ipv4_address
+  type    = "CNAME"
+  value   = "andykuszyk.github.io"
   zone_id = var.akuszyk_zone_id
-}
-
-resource "cloudflare_record" "akuszyk_mx0" {
-  name     = "akuszyk.com"
-  priority = 10
-  proxied  = false
-  ttl      = 1
-  type     = "MX"
-  value    = "mx0.123-reg.co.uk"
-  zone_id  = var.akuszyk_zone_id
-}
-
-resource "cloudflare_record" "akuszyk_mx1" {
-  name     = "akuszyk.com"
-  priority = 20
-  proxied  = false
-  ttl      = 1
-  type     = "MX"
-  value    = "mx1.123-reg.co.uk"
-  zone_id  = var.akuszyk_zone_id
 }
 
 resource "cloudflare_record" "cronical_cronical_net" {
@@ -136,7 +116,7 @@ resource "cloudflare_record" "marmyandme_mx0" {
   proxied  = false
   ttl      = 1
   type     = "MX"
-  value    = "mx0.123-reg.co.uk"
+  value    = "in1-smtp.messagingengine.com"
   zone_id  = var.marmyandme_zone_id
 }
 
@@ -146,7 +126,7 @@ resource "cloudflare_record" "marmyandme_mx1" {
   proxied  = false
   ttl      = 1
   type     = "MX"
-  value    = "mx1.123-reg.co.uk"
+  value    = "in1-smtp.messagingengine.com"
   zone_id  = var.marmyandme_zone_id
 }
 
